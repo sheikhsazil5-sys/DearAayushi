@@ -46,21 +46,20 @@ body{
 .card{
     width:100%;
     max-width:520px;
-    padding:50px 35px;
-    text-align:center;
+    padding:55px 35px;
 
-    background:rgba(255,255,255,.55);
-    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.65);
 
-    border:1px solid rgba(255,255,255,.7);
+    backdrop-filter:blur(20px);
 
-    border-radius:28px;
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.8);
 
     box-shadow:
-    0 20px 60px rgba(231,84,128,.12);
-}
+    0 25px 70px rgba(231,84,128,.15);
 
-/* Text */
+}
 
 .card span{
     letter-spacing:3px;
@@ -73,11 +72,13 @@ h1{
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:68px;
+font-size:74px;
 
-margin:20px 0;
+font-weight:700;
 
-color:#d64d79;
+color:#C4456F;
+
+margin:18px 0;
 
 }
 
