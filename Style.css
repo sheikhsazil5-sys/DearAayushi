@@ -202,3 +202,51 @@ transform:scale(1.25);
 opacity:0;
 visibility:hidden;
 }
+.shooting-stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:-1;
+}
+
+.shooting-stars::before,
+.shooting-stars::after{
+content:"";
+position:absolute;
+width:180px;
+height:2px;
+background:linear-gradient(90deg,#fff,transparent);
+transform:rotate(-35deg);
+animation:shoot 7s linear infinite;
+opacity:.8;
+}
+
+.shooting-stars::before{
+top:20%;
+left:-200px;
+animation-delay:0s;
+}
+
+.shooting-stars::after{
+top:50%;
+left:-300px;
+animation-delay:3s;
+}
+
+@keyframes shoot{
+0%{
+transform:translateX(0) translateY(0) rotate(-35deg);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+100%{
+transform:translateX(1700px) translateY(600px) rotate(-35deg);
+opacity:0;
+}
+}
