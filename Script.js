@@ -1,3 +1,12 @@
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document.getElementById("loader").classList.add("loader-hide");
+
+    }, 2500);
+
+});
 // Smooth button effect
 const button = document.getElementById("openBtn");
 
