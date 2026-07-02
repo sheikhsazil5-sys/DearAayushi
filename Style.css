@@ -250,3 +250,18 @@ transform:translateX(1700px) translateY(600px) rotate(-35deg);
 opacity:0;
 }
 }
+.cursor-glow{
+position:fixed;
+width:220px;
+height:220px;
+border-radius:50%;
+background:radial-gradient(circle,
+rgba(255,80,150,.28) 0%,
+rgba(255,80,150,.10) 40%,
+transparent 75%);
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:999;
+transition:transform .08s linear;
+filter:blur(20px);
+}
