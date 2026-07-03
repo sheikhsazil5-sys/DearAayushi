@@ -42,6 +42,7 @@ btn.style.transform = "translateY(15px)";
         }else{
 
             clearInterval(typing);
+           letter.innerHTML = popupMessage.replace(/\n/g,"<br>");
            btn.style.opacity = "1";
 btn.style.transform = "translateY(0)";
 
