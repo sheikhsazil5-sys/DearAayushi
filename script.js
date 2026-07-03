@@ -124,3 +124,46 @@ btn.style.transform="translateY(0) scale(1)";
 });
 
 });
+/* ===============================
+   Envelope Popup
+================================*/
+
+const openBtn = document.getElementById("openBtn");
+const overlay = document.getElementById("overlay");
+const envelope = document.querySelector(".envelope");
+const continueBtn = document.getElementById("continueBtn");
+
+if(openBtn){
+
+openBtn.addEventListener("click",()=>{
+
+overlay.classList.add("active");
+
+setTimeout(()=>{
+
+envelope.classList.add("open");
+
+},500);
+
+});
+
+}
+
+if(continueBtn){
+
+continueBtn.addEventListener("click",()=>{
+
+overlay.classList.remove("active");
+
+envelope.classList.remove("open");
+
+document.querySelector(".story").scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});
+
+}
+
