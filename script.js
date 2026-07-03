@@ -72,16 +72,14 @@ function createPetal(){
 
 setInterval(createPetal,500);
 
-
 // Envelope
 
-const openBtn=document.getElementById("openBtn");
-const overlay=document.getElementById("overlay");
-const envelope=document.querySelector(".envelope");
-const continueBtn=document.getElementById("continueBtn");
-openBtn.addEventListener("click",()=>{
+const openBtn = document.getElementById("openBtn");
+const overlay = document.getElementById("overlay");
+const envelope = document.querySelector(".envelope");
+const continueBtn = document.getElementById("continueBtn");
 
-    alert("Open Button Clicked");
+openBtn.addEventListener("click",()=>{
 
     overlay.classList.add("active");
 
@@ -90,9 +88,6 @@ openBtn.addEventListener("click",()=>{
         envelope.classList.add("open");
 
         typePopupLetter();
-       letter.innerHTML =
-popupMessage.substring(0,i).replace(/\n/g,"<br>") +
-'<span class="cursor"></span>';
 
     },800);
 
@@ -100,15 +95,13 @@ popupMessage.substring(0,i).replace(/\n/g,"<br>") +
 
 continueBtn.addEventListener("click",()=>{
 
-overlay.classList.remove("active");
+    overlay.classList.remove("active");
 
-envelope.classList.remove("open");
+    envelope.classList.remove("open");
 
-document.querySelector(".story").scrollIntoView({
-
-behavior:"smooth"
-
-});
+    document.querySelector(".story").scrollIntoView({
+        behavior:"smooth"
+    });
 
 });
 
