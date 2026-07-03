@@ -382,47 +382,75 @@ setInterval(()=>{
 // ===============================
 // OPEN MEMORY JAR
 // ===============================
+const petals = [
+    "assets/images/petal1.png",
+    "assets/images/petal2.png",
+    "assets/images/petal3.png",
+    "assets/images/petal4.png"
+];
 
+function roseRain(){
+
+    for(let i=0;i<180;i++){
+
+        const petal=document.createElement("img");
+
+        petal.src=petals[Math.floor(Math.random()*petals.length)];
+
+        const size=12+Math.random()*38;
+        const drift=(Math.random()-0.5)*700;
+        const duration=5000+Math.random()*3000;
+        const rotate=720+Math.random()*720;
+        const delay=Math.random()*2500;
+
+        petal.style.position="fixed";
+        petal.style.left=Math.random()*100+"vw";
+        petal.style.top="-60px";
+        petal.style.width=size+"px";
+        petal.style.pointerEvents="none";
+        petal.style.zIndex="99999";
+        petal.style.opacity="0";
+
+        document.body.appendChild(petal);
+
+        setTimeout(()=>{
+
+            petal.style.opacity="1";
+
+            petal.animate([
+                {
+                    transform:"translate(0,0) rotate(0deg)",
+                    opacity:1
+                },
+                {
+                    transform:`translate(${drift}px,120vh) rotate(${rotate}deg)`,
+                    opacity:0
+                }
+            ],{
+                duration:duration,
+                easing:"ease-in-out",
+                fill:"forwards"
+            });
+
+        },delay);
+
+        setTimeout(()=>{
+            petal.remove();
+        },duration+delay);
+
+    }
+
+}
 openJar.addEventListener("click",()=>{
 
     if(memories < maxMemories){
 
         alert("Collect all memories first ❤️");
-
         return;
 
     }
 
-    for(let i=0;i<80;i++){
-
-        const heart = document.createElement("div");
-
-        heart.innerHTML="❤️";
-
-        heart.style.position="fixed";
-        heart.style.left=Math.random()*100+"vw";
-        heart.style.top="100vh";
-        heart.style.fontSize=(18+Math.random()*18)+"px";
-        heart.style.transition="3s linear";
-        heart.style.zIndex="99999";
-
-        document.body.appendChild(heart);
-
-        setTimeout(()=>{
-
-            heart.style.top="-100px";
-            heart.style.transform=
-            `translateX(${Math.random()*300-150}px)`;
-
-        },50);
-
-        setTimeout(()=>{
-
-            heart.remove();
-
-        },3000);
-
-    }
+    roseRain();   // 👈 bas ye call
 
     setTimeout(()=>{
 
