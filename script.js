@@ -13,8 +13,6 @@ I hope this little surprise brings a smile to your face.
 
 const petals = document.querySelector(".petals");
 function typePopupLetter(){
-   
-   alert("Typing Started");
 
     const letter = document.getElementById("popupLetter");
 
@@ -77,6 +75,8 @@ const envelope=document.querySelector(".envelope");
 const continueBtn=document.getElementById("continueBtn");
 openBtn.addEventListener("click",()=>{
 
+    alert("Open Button Clicked");
+
     overlay.classList.add("active");
 
     setTimeout(()=>{
@@ -88,7 +88,6 @@ openBtn.addEventListener("click",()=>{
     },800);
 
 });
-
 
 continueBtn.addEventListener("click",()=>{
 
