@@ -1209,3 +1209,6 @@ opacity:0;
 
     backdrop-filter:blur(14px);
 }
+body{
+    padding:40px 20px;
+}
