@@ -378,10 +378,10 @@ setInterval(()=>{
 
 },2000);
 
+// ===============================
+// CINEMATIC ROSE PETAL RAIN + OPEN MEMORY JAR
+// ===============================
 
-// ===============================
-// OPEN MEMORY JAR
-// ===============================
 const petals = [
     "assets/images/petal1.png",
     "assets/images/petal2.png",
@@ -391,21 +391,21 @@ const petals = [
 
 function roseRain(){
 
-    for(let i=0;i<180;i++){
+    for(let i=0;i<220;i++){
 
         const petal=document.createElement("img");
 
         petal.src=petals[Math.floor(Math.random()*petals.length)];
 
-        const size=12+Math.random()*38;
-        const drift=(Math.random()-0.5)*700;
-        const duration=5000+Math.random()*3000;
-        const rotate=720+Math.random()*720;
-        const delay=Math.random()*2500;
+        const size=12+Math.random()*35;
+        const drift=(Math.random()-0.5)*900;
+        const duration=7000+Math.random()*5000;
+        const rotate=Math.random()*1440-720;
+        const delay=Math.random()*4000;
 
         petal.style.position="fixed";
         petal.style.left=Math.random()*100+"vw";
-        petal.style.top="-60px";
+        petal.style.top="-80px";
         petal.style.width=size+"px";
         petal.style.pointerEvents="none";
         petal.style.zIndex="99999";
@@ -441,6 +441,11 @@ function roseRain(){
     }
 
 }
+
+// ===============================
+// OPEN MEMORY JAR
+// ===============================
+
 openJar.addEventListener("click",()=>{
 
     if(memories < maxMemories){
@@ -450,12 +455,21 @@ openJar.addEventListener("click",()=>{
 
     }
 
-    roseRain();   // 👈 bas ye call
+    // 🌹 3 Waves of Rose Petals
+    roseRain();
+
+    setTimeout(()=>{
+        roseRain();
+    },2500);
+
+    setTimeout(()=>{
+        roseRain();
+    },5000);
 
     setTimeout(()=>{
 
-        alert("❤️ Every memory we made will always have a place in my heart.\n\nThank You, Mahi 🌸");
+        alert("🌸 Some memories never fade...\n\nThey bloom forever.\n\n❤️ Thank You, Mahi ❤️");
 
-    },1200);
+    },3500);
 
 });
