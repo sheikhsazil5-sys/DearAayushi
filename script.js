@@ -42,7 +42,7 @@ function typePopupLetter(){
 
         }
 
-    },40);
+    },80);
 
 }
 
