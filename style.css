@@ -1048,3 +1048,30 @@ opacity:0;
         opacity:1;
     }
 }
+.last-surprise{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.last-surprise h2{
+    font-size:42px;
+    color:#d64d79;
+    margin-bottom:20px;
+}
+
+.last-surprise p{
+    color:#6b5563;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+#lastBtn{
+    background:linear-gradient(135deg,#ff6fa5,#ff94bd);
+    color:#fff;
+    border:none;
+    padding:16px 40px;
+    border-radius:50px;
+    font-size:17px;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(255,105,180,.35);
+}
