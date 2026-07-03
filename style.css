@@ -1394,3 +1394,32 @@ button:hover{
     font-size:18px;
     color:#5d4a57;
 }
+#hiddenLetter{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:1s ease;
+
+    margin-top:25px;
+
+}
+
+#hiddenLetter.open{
+
+    max-height:900px;
+
+}
+
+#hiddenText{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:28px;
+
+    line-height:1.9;
+
+    color:#5b4b45;
+
+}
