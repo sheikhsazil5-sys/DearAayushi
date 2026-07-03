@@ -269,3 +269,68 @@ lastBtn.addEventListener("click",()=>{
     },120);
 
 });
+// ===============================
+// Read More Letter
+// ===============================
+
+const readMore = document.getElementById("readMore");
+const hiddenLetter = document.getElementById("hiddenLetter");
+const hiddenText = document.getElementById("hiddenText");
+
+const fullLetter = `Dear Mahi ❤️
+
+Some people become memories.
+
+But you became one of my favorite chapters.
+
+Thank you for every smile,
+every conversation,
+and every beautiful moment.
+
+I don't know what tomorrow holds,
+
+but today...
+
+I'm grateful that our paths crossed.
+
+Keep smiling.
+
+With Love,
+
+Sazil ❤️`;
+
+readMore.addEventListener("click",()=>{
+
+    hiddenLetter.classList.add("open");
+
+    hiddenText.innerHTML="";
+
+    let i=0;
+
+    const typing=setInterval(()=>{
+
+        if(i<fullLetter.length){
+
+            if(fullLetter.charAt(i)==="\n"){
+
+                hiddenText.innerHTML+="<br>";
+
+            }else{
+
+                hiddenText.innerHTML+=fullLetter.charAt(i);
+
+            }
+
+            i++;
+
+        }else{
+
+            clearInterval(typing);
+
+            readMore.style.display="none";
+
+        }
+
+    },40);
+
+});
