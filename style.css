@@ -515,6 +515,21 @@ box-shadow:0 12px 30px rgba(0,0,0,.08);
 
 }
 
+.photo img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+    border-radius:20px 20px 0 0;
+}
+
+.photo p{
+    padding:18px;
+    text-align:center;
+    font-size:15px;
+    color:#6d5662;
+}
+
 .photo:hover{
 
 transform:translateY(-10px);
