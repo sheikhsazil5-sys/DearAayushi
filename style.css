@@ -1257,3 +1257,11 @@ button:hover{
     transform:translateY(-4px) scale(1.03);
     box-shadow:0 15px 35px rgba(255,105,180,.35);
 }
+.photo img{
+    transition:.4s ease;
+    cursor:pointer;
+}
+
+.photo img:hover{
+    transform:scale(1.05);
+}
