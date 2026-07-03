@@ -334,3 +334,100 @@ readMore.addEventListener("click",()=>{
     },40);
 
 });
+// ===============================
+// MEMORY JAR
+// ===============================
+
+const jarHearts = document.getElementById("jarHearts");
+const memoryCount = document.getElementById("memoryCount");
+const openJar = document.getElementById("openJar");
+
+let memories = 0;
+const maxMemories = 5;
+
+// Add Heart Function
+function addMemoryHeart(){
+
+    if(memories >= maxMemories) return;
+
+    memories++;
+
+    memoryCount.innerText = memories;
+
+    const heart = document.createElement("div");
+    heart.className = "jar-heart";
+    heart.innerHTML = "❤️";
+
+    jarHearts.appendChild(heart);
+
+    if(memories === maxMemories){
+
+        openJar.style.boxShadow =
+        "0 0 25px rgba(255,105,180,.8)";
+
+        openJar.style.transform = "scale(1.05)";
+    }
+
+}
+
+// Demo (Automatically fills every 2 seconds)
+// Baad me isko Story, Gallery, Letter se connect karenge.
+setInterval(()=>{
+
+    addMemoryHeart();
+
+},2000);
+
+
+// ===============================
+// OPEN MEMORY JAR
+// ===============================
+
+openJar.addEventListener("click",()=>{
+
+    if(memories < maxMemories){
+
+        alert("Collect all memories first ❤️");
+
+        return;
+
+    }
+
+    for(let i=0;i<80;i++){
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML="❤️";
+
+        heart.style.position="fixed";
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.top="100vh";
+        heart.style.fontSize=(18+Math.random()*18)+"px";
+        heart.style.transition="3s linear";
+        heart.style.zIndex="99999";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.style.top="-100px";
+            heart.style.transform=
+            `translateX(${Math.random()*300-150}px)`;
+
+        },50);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },3000);
+
+    }
+
+    setTimeout(()=>{
+
+        alert("❤️ Every memory we made will always have a place in my heart.\n\nThank You, Mahi 🌸");
+
+    },1200);
+
+});
