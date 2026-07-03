@@ -3,8 +3,48 @@
    Script.js
 =========================== */
 // Falling Petals
+const popupMessage = `Before you continue...
+
+Thank you for opening this little corner of my heart.
+
+I hope this little surprise brings a smile to your face.
+
+❤️`;
 
 const petals = document.querySelector(".petals");
+function typePopupLetter(){
+
+    const letter = document.getElementById("popupLetter");
+
+    letter.innerHTML = "";
+
+    let i = 0;
+
+    const typing = setInterval(()=>{
+
+        if(i < popupMessage.length){
+
+            if(popupMessage.charAt(i) === "\n"){
+
+                letter.innerHTML += "<br>";
+
+            }else{
+
+                letter.innerHTML += popupMessage.charAt(i);
+
+            }
+
+            i++;
+
+        }else{
+
+            clearInterval(typing);
+
+        }
+
+    },40);
+
+}
 
 function createPetal(){
 
@@ -33,18 +73,20 @@ const openBtn=document.getElementById("openBtn");
 const overlay=document.getElementById("overlay");
 const envelope=document.querySelector(".envelope");
 const continueBtn=document.getElementById("continueBtn");
-
 openBtn.addEventListener("click",()=>{
 
-overlay.classList.add("active");
+    overlay.classList.add("active");
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-envelope.classList.add("open");
+        envelope.classList.add("open");
 
-},500);
+        typePopupLetter();
+
+    },800);
 
 });
+
 
 continueBtn.addEventListener("click",()=>{
 
