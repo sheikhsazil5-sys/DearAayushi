@@ -42,6 +42,8 @@ btn.style.transform = "translateY(15px)";
         }else{
 
             clearInterval(typing);
+           btn.style.opacity = "1";
+btn.style.transform = "translateY(0)";
 
         }
 
