@@ -505,7 +505,9 @@ gap:25px;
 
     border-radius:8px;
 
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+   box-shadow:
+0 25px 60px rgba(0,0,0,.15),
+0 8px 18px rgba(255,105,180,.12);
 
     transition:.45s ease;
 
@@ -568,6 +570,25 @@ gap:25px;
     transform:translateX(-50%);
 
     font-size:20px;
+
+}
+.photo:nth-child(1){
+    transform:rotate(-4deg);
+}
+
+.photo:nth-child(2){
+    transform:rotate(3deg);
+}
+
+.photo:nth-child(3){
+    transform:rotate(-2deg);
+}
+
+.photo:nth-child(1):hover,
+.photo:nth-child(2):hover,
+.photo:nth-child(3):hover{
+
+    transform:rotate(0deg) scale(1.05);
 
 }
 
