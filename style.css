@@ -1236,3 +1236,16 @@ body{
     transform:translateY(-6px);
     box-shadow:0 25px 55px rgba(255,105,180,.18);
 }
+.divider{
+
+    width:120px;
+
+    height:2px;
+
+    margin:60px auto;
+
+    background:linear-gradient(to right,transparent,#ff7aa8,transparent);
+
+    border-radius:50px;
+
+}
