@@ -215,7 +215,15 @@ function typeFinalMessage() {
 }
 
 lastBtn.addEventListener("click", () => {
+lastBtn.addEventListener("click", () => {
 
+    alert("Final Button Clicked");
+
+    finalPopup.style.display = "flex";
+
+    typeFinalMessage();
+
+});
     finalPopup.style.display = "flex";
 
     typeFinalMessage();
