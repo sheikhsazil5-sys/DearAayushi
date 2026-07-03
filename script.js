@@ -89,6 +89,9 @@ openBtn.addEventListener("click",()=>{
         envelope.classList.add("open");
 
         typePopupLetter();
+       letter.innerHTML =
+popupMessage.substring(0,i).replace(/\n/g,"<br>") +
+'<span class="cursor"></span>';
 
     },800);
 
