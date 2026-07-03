@@ -15,7 +15,10 @@ const petals = document.querySelector(".petals");
 function typePopupLetter(){
 
     const letter = document.getElementById("popupLetter");
+const btn = document.getElementById("continueBtn");
 
+btn.style.opacity = "0";
+btn.style.transform = "translateY(15px)";
     letter.innerHTML = "";
 
     let i = 0;
