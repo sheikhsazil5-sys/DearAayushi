@@ -2,27 +2,19 @@
    Dear Mahi
    Script.js
 =========================== */
-
-// 🌸 Falling Petals
+// Falling Petals
 
 const petals = document.querySelector(".petals");
 
 function createPetal(){
 
-    const petal = document.createElement("div");
+    const petal=document.createElement("div");
 
     petal.classList.add("petal");
 
-    petal.style.left = Math.random()*100 + "vw";
+    petal.style.left=Math.random()*100+"vw";
 
-    petal.style.animationDuration =
-    (8 + Math.random()*5) + "s";
-
-    petal.style.opacity =
-    (0.4 + Math.random()*0.6);
-
-    petal.style.transform =
-    `rotate(${Math.random()*360}deg)`;
+    petal.style.animationDuration=(8+Math.random()*5)+"s";
 
     petals.appendChild(petal);
 
@@ -31,11 +23,16 @@ function createPetal(){
     },13000);
 
 }
-const overlay = document.getElementById("overlay");
-const envelope = document.querySelector(".envelope");
-const continueBtn = document.getElementById("continueBtn");
 
-if(openBtn){
+setInterval(createPetal,500);
+
+
+// Envelope
+
+const openBtn=document.getElementById("openBtn");
+const overlay=document.getElementById("overlay");
+const envelope=document.querySelector(".envelope");
+const continueBtn=document.getElementById("continueBtn");
 
 openBtn.addEventListener("click",()=>{
 
@@ -49,10 +46,6 @@ envelope.classList.add("open");
 
 });
 
-}
-
-if(continueBtn){
-
 continueBtn.addEventListener("click",()=>{
 
 overlay.classList.remove("active");
@@ -60,50 +53,33 @@ overlay.classList.remove("active");
 envelope.classList.remove("open");
 
 document.querySelector(".story").scrollIntoView({
+
 behavior:"smooth"
-});
 
 });
 
-}
+});
 
 
+// Scroll Reveal
 
-/* ===========================
-   Scroll Reveal
-=========================== */
+const sections=document.querySelectorAll(".story,.timeline,.gallery,.special,.letter,.music,.ending");
 
-const sections = document.querySelectorAll(
-
-".story,.timeline,.gallery,.special,.letter,.music,.ending"
-
-);
-
-const observer = new IntersectionObserver(
-
-(entries)=>{
+const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.style.opacity="1";
+entry.target.style.opacity="1";
 
-entry.style.transform="translateY(0)";
+entry.target.style.transform="translateY(0)";
 
 }
 
 });
 
-},
-
-{
-
-threshold:.15
-
-}
-
-);
+});
 
 sections.forEach(section=>{
 
@@ -116,25 +92,3 @@ section.style.transition="1s";
 observer.observe(section);
 
 });
-
-
-/* ===========================
-   Button Hover
-=========================== */
-
-document.querySelectorAll("button").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="translateY(-4px) scale(1.03)";
-
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="translateY(0) scale(1)";
-
-});
-
-}
-
