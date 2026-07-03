@@ -1212,3 +1212,27 @@ opacity:0;
 body{
     padding:40px 20px;
 }
+.story,
+.timeline,
+.gallery,
+.special,
+.letter,
+.music,
+.ending,
+.last-surprise{
+
+    transition:0.4s ease;
+}
+
+.story:hover,
+.timeline:hover,
+.gallery:hover,
+.special:hover,
+.letter:hover,
+.music:hover,
+.ending:hover,
+.last-surprise:hover{
+
+    transform:translateY(-6px);
+    box-shadow:0 25px 55px rgba(255,105,180,.18);
+}
