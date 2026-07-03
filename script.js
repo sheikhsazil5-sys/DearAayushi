@@ -180,58 +180,55 @@ const finalMessage = `Dear Mahi ❤️
 
 Thank you for being one of the most beautiful chapters of my life.
 
-No matter what happens in the future, I'll always smile whenever I remember these moments.
+No matter what happens in the future,
+I'll always smile whenever I remember these moments.
 
 You are truly special.
 
 Keep smiling... Always. 🌸`;
 
-function typeFinalMessage() {
+function typeFinalMessage(){
 
     finalText.innerHTML = "";
 
     let i = 0;
 
-    const typing = setInterval(() => {
+    const typing = setInterval(()=>{
 
-        if (i < finalMessage.length) {
+        if(i < finalMessage.length){
 
-            if (finalMessage.charAt(i) === "\n") {
+            if(finalMessage.charAt(i) === "\n"){
                 finalText.innerHTML += "<br>";
-            } else {
+            }else{
                 finalText.innerHTML += finalMessage.charAt(i);
             }
 
             i++;
 
-        } else {
+        }else{
 
             clearInterval(typing);
 
         }
 
-    }, 40);
+    },40);
 
 }
 
-lastBtn.addEventListener("click", () => {
-lastBtn.addEventListener("click", () => {
+if(lastBtn && finalPopup && finalText && closeFinal){
 
-    alert("Final Button Clicked");
+    lastBtn.addEventListener("click",()=>{
 
-    finalPopup.style.display = "flex";
+        finalPopup.style.display = "flex";
 
-    typeFinalMessage();
+        typeFinalMessage();
 
-});
-    finalPopup.style.display = "flex";
+    });
 
-    typeFinalMessage();
+    closeFinal.addEventListener("click",()=>{
 
-});
+        finalPopup.style.display = "none";
 
-closeFinal.addEventListener("click", () => {
+    });
 
-    finalPopup.style.display = "none";
-
-});
+}
