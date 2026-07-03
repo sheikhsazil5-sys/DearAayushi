@@ -1143,3 +1143,47 @@ opacity:0;
         opacity:0;
     }
 }
+/* ===============================
+   THE END
+================================*/
+
+.end-screen{
+    position:fixed;
+    inset:0;
+    background:rgba(255,240,246,.97);
+    backdrop-filter:blur(10px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:10001;
+    text-align:center;
+    padding:30px;
+}
+
+.end-screen.show{
+    display:flex;
+}
+
+.end-content h1{
+    font-size:55px;
+    color:#d64d79;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:15px;
+}
+
+.end-content p{
+    font-size:19px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:30px;
+}
+
+#restartBtn{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:#ff6fa5;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+}
