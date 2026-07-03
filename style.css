@@ -148,3 +148,44 @@ transform:translateY(110vh) rotate(360deg);
 }
 
 }
+/* Hero Animation */
+
+.hero{
+
+animation:fadeUp 1.5s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Floating Card */
+
+.card{
+
+animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
