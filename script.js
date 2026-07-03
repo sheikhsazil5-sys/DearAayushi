@@ -13,6 +13,8 @@ I hope this little surprise brings a smile to your face.
 
 const petals = document.querySelector(".petals");
 function typePopupLetter(){
+   
+   alert("Typing Started");
 
     const letter = document.getElementById("popupLetter");
 
