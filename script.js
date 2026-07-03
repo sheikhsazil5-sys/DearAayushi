@@ -167,3 +167,63 @@ popup.addEventListener("click",(e)=>{
     }
 
 });
+// ===============================
+// Final Surprise
+// ===============================
+
+const lastBtn = document.getElementById("lastBtn");
+const finalPopup = document.getElementById("finalPopup");
+const finalText = document.getElementById("finalText");
+const closeFinal = document.getElementById("closeFinal");
+
+const finalMessage = `Dear Mahi ❤️
+
+Thank you for being one of the most beautiful chapters of my life.
+
+No matter what happens in the future, I'll always smile whenever I remember these moments.
+
+You are truly special.
+
+Keep smiling... Always. 🌸`;
+
+function typeFinalMessage() {
+
+    finalText.innerHTML = "";
+
+    let i = 0;
+
+    const typing = setInterval(() => {
+
+        if (i < finalMessage.length) {
+
+            if (finalMessage.charAt(i) === "\n") {
+                finalText.innerHTML += "<br>";
+            } else {
+                finalText.innerHTML += finalMessage.charAt(i);
+            }
+
+            i++;
+
+        } else {
+
+            clearInterval(typing);
+
+        }
+
+    }, 40);
+
+}
+
+lastBtn.addEventListener("click", () => {
+
+    finalPopup.style.display = "flex";
+
+    typeFinalMessage();
+
+});
+
+closeFinal.addEventListener("click", () => {
+
+    finalPopup.style.display = "none";
+
+});
