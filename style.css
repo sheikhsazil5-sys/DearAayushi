@@ -1812,7 +1812,7 @@ const maxMemories = 5;
 
 // Add Heart Function
 function addMemoryHeart(){
-
+console.log("Heart Added");
     if(memories >= maxMemories) return;
 
     memories++;
