@@ -1423,3 +1423,98 @@ button:hover{
     color:#5b4b45;
 
 }
+/* ===============================
+   MEMORY JAR
+================================*/
+
+.memory-jar{
+
+    text-align:center;
+    padding:100px 20px;
+
+}
+
+.jar{
+
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
+
+}
+
+.jar-glass{
+
+    width:220px;
+    height:280px;
+
+    border:8px solid rgba(255,255,255,.9);
+
+    border-radius:30px 30px 60px 60px;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(12px);
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+#jarHearts{
+
+    position:absolute;
+
+    bottom:15px;
+
+    width:100%;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.jar-heart{
+
+    font-size:26px;
+
+    animation:pop .5s ease;
+
+}
+
+.counter{
+
+    font-size:20px;
+
+    margin:25px 0;
+
+    color:#d64d79;
+
+}
+
+@keyframes pop{
+
+    from{
+
+        transform:scale(0);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
