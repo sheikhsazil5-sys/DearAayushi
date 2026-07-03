@@ -1265,3 +1265,16 @@ button:hover{
 .photo img:hover{
     transform:scale(1.05);
 }
+.final-card{
+    background:rgba(255,255,255,.96);
+    border-radius:28px;
+    padding:35px;
+    border:2px solid rgba(255,182,193,.5);
+    box-shadow:0 25px 60px rgba(255,105,180,.25);
+}
+
+#finalText{
+    line-height:2;
+    font-size:18px;
+    color:#5d4a57;
+}
