@@ -1009,3 +1009,42 @@ opacity:0;
 }
 
 }
+.image-popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.92);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:10000;
+}
+
+.image-popup img{
+    max-width:95%;
+    max-height:90%;
+    border-radius:18px;
+    animation:zoom .35s ease;
+}
+
+#closeImage{
+    position:absolute;
+    top:20px;
+    right:25px;
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
