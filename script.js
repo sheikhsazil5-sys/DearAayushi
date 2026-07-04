@@ -447,6 +447,7 @@ function roseRain(){
 // ===============================
 
 openJar.addEventListener("click",()=>{
+   console.log(memories);
 
     if(memories < maxMemories){
 
