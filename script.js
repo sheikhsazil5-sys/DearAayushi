@@ -484,3 +484,14 @@ finalMusic.play().catch(()=>{});
 
 });
 alert("Script Loaded");
+// ================= LOADER =================
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").classList.add("loader-hide");
+
+},3000);
+
+});
