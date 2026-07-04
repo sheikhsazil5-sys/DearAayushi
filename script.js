@@ -382,7 +382,7 @@ setInterval(()=>{
 // CINEMATIC ROSE PETAL RAIN + OPEN MEMORY JAR
 // ===============================
 
-const petalsImages = [
+const petalImages = [
     "assets/images/petal1.png",
     "assets/images/petal2.png",
     "assets/images/petal3.png",
