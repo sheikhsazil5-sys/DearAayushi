@@ -78,6 +78,11 @@ const openBtn = document.getElementById("openBtn");
 const overlay = document.getElementById("overlay");
 const envelope = document.querySelector(".envelope");
 const continueBtn = document.getElementById("continueBtn");
+const bgMusic = document.getElementById("bgMusic");
+const finalMusic = document.getElementById("finalMusic");
+
+bgMusic.volume = 0.35;
+finalMusic.volume = 0.45;
 
 openBtn.addEventListener("click",()=>{
 
@@ -96,6 +101,7 @@ openBtn.addEventListener("click",()=>{
 continueBtn.addEventListener("click",()=>{
 
     overlay.classList.remove("active");
+   bgMusic.play().catch(()=>{});
 
     envelope.classList.remove("open");
 
@@ -297,7 +303,7 @@ Keep smiling.
 
 With Love,
 
-Sazil ❤️`;
+Saz❤️`;
 
 readMore.addEventListener("click",()=>{
 
@@ -457,6 +463,9 @@ openJar.addEventListener("click",()=>{
     }
 
     // 🌹 3 Waves of Rose Petals
+   bgMusic.pause();
+bgMusic.currentTime = 0;
+finalMusic.play().catch(()=>{});
     roseRain();
 
     setTimeout(()=>{
