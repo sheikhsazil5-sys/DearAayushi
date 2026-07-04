@@ -382,7 +382,7 @@ setInterval(()=>{
 // CINEMATIC ROSE PETAL RAIN + OPEN MEMORY JAR
 // ===============================
 
-const petals = [
+const petalsImages = [
     "assets/images/petal1.png",
     "assets/images/petal2.png",
     "assets/images/petal3.png",
@@ -395,7 +395,7 @@ function roseRain(){
 
         const petal=document.createElement("img");
 
-        petal.src=petals[Math.floor(Math.random()*petals.length)];
+        petal.src = petalImages[Math.floor(Math.random()*petalImages.length)];
 
         const size=12+Math.random()*35;
         const drift=(Math.random()-0.5)*900;
