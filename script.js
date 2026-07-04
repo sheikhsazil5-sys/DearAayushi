@@ -474,3 +474,4 @@ openJar.addEventListener("click",()=>{
     },3500);
 
 });
+alert("Script Loaded");
