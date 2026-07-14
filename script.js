@@ -478,7 +478,7 @@ finalMusic.play().catch(()=>{});
 
     setTimeout(()=>{
 
-        alert("🌸 Some memories never fade...\n\nThey bloom forever.\n\n❤️ Thank You, Aayushi❤️");
+        alert("🌸 Some memories never fade...\n\nThey bloom forever.\n\n❤️ Thank You, Mahi❤️");
 
     },3500);
 
