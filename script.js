@@ -1,5 +1,5 @@
 /* ===========================
-   Dear Aayushi
+   Dear Mahi
    Script.js
 =========================== */
 // Falling Petals
@@ -182,7 +182,7 @@ const finalPopup = document.getElementById("finalPopup");
 const finalText = document.getElementById("finalText");
 const closeFinal = document.getElementById("closeFinal");
 
-const finalMessage = `Dear Aayushi ❤️
+const finalMessage = `Dear Mahi ❤️
 
 Thank you for being one of the most beautiful chapters of my life.
 
@@ -283,7 +283,7 @@ const readMore = document.getElementById("readMore");
 const hiddenLetter = document.getElementById("hiddenLetter");
 const hiddenText = document.getElementById("hiddenText");
 
-const fullLetter = `Dear Aayushi ❤️
+const fullLetter = `Dear Mahi❤️
 
 Some people become memories.
 
