@@ -1,5 +1,5 @@
 /* ==========================================
-   DEAR Mahi
+   DEAR Disha 
    STYLE.CSS
    PART 1
 ========================================== */
@@ -1464,7 +1464,7 @@ button:hover{
 }
 
 /* ===========================
-   Dear Mahi
+   Dear Disha
    Script.js
 =========================== */
 // Falling Petals
@@ -1641,7 +1641,7 @@ const finalPopup = document.getElementById("finalPopup");
 const finalText = document.getElementById("finalText");
 const closeFinal = document.getElementById("closeFinal");
 
-const finalMessage = `Dear Mahi ❤️
+const finalMessage = `Dear Disha ❤️
 
 Thank you for being one of the most beautiful chapters of my life.
 
@@ -1742,7 +1742,7 @@ const readMore = document.getElementById("readMore");
 const hiddenLetter = document.getElementById("hiddenLetter");
 const hiddenText = document.getElementById("hiddenText");
 
-const fullLetter = `Dear Mahi ❤️
+const fullLetter = `Dear Disha ❤️
 
 Some people become memories.
 
